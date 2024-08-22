@@ -9,6 +9,7 @@ import Image from "next/image";
 import { GearIcon } from "@radix-ui/react-icons";
 import { trpc } from "@/server/client";
 import BouncingLoader from "./bouncing-loader";
+import CreateNotificationModal from "./create-notification-modal";
 
 export type Notification = {
   id: number;
@@ -163,15 +164,7 @@ export default function AppBar() {
                 ))}
               </ul>
 
-              {/* View All Button */}
-              {/* <div className="text-center">
-                <button
-                  className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                  onClick={() => setIsPopoverOpen(false)}
-                >
-                  View All
-                </button>
-              </div> */}
+              <CreateNotificationModal />
             </div>
           </Popover.Content>
         </Popover.Root>
